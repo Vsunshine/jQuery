@@ -1,0 +1,16 @@
+针对移动端程序，Zepto有一些基本的触摸事件可以用来做触摸屏交互（tap事件、swipe事件），Zepto是不支持IE浏览器的。
+
+DOM操作的区别：添加id时jQuery不会生效而Zepto会生效
+
+事件触发的区别：使用jquery时load事件的处理函数不会执行；使用zepto时load事件的处理函数会执行
+
+事件委托的区别：zepto中，选择器上所有的委托事件都依次放入到一个队列中，而在jquery中则委托成独立的多个事件
+
+width() 与 height()的区别：zepto由盒模型（box-sizing）决定，用.width()返回赋值的width，用.css('width')返回border等的结果；jquery会忽略盒模型，始终返回内容区域的宽/高（不包含padding、border）
+
+.offset()的区别：zepto返回{top,left,width,height}; jquery返回{width,height}。zepto无法获取隐藏元素宽高，jquery可以
+
+zepto中没有为原型定义extend方法而jquery有
+
+zepto的each方法只能遍历数组，不能遍历JSON对象。
+
